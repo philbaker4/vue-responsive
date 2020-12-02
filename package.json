@@ -1,7 +1,7 @@
 {
-  "name": "base-ts-package",
-  "version": "1.0.0",
-  "description": "A template repository for developing Typescript packages.",
+  "name": "vue-responsive",
+  "version": "0.0.1",
+  "description": "Vue plugin for matching media queries in JS or TS",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
