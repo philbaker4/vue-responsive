@@ -1,0 +1,40 @@
+{
+  "name": "base-ts-package",
+  "version": "1.0.0",
+  "description": "A template repository for developing Typescript packages.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "playground": "ts-node src/playground",
+    "build": "tsc",
+    "test": "jest --config jestconfig.json",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postpublish": "git push && git push --tags"
+  },
+  "keywords": [],
+  "author": "Philip Baker",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^26.0.5",
+    "jest": "^26.1.0",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.1.3",
+    "ts-node": "^8.10.2",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.7"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "homepage": "https://github.com/philbaker4/base-ts-package",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philbaker4/base-ts-package.git"
+  }
+}
