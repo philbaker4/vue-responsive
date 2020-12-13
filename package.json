@@ -36,5 +36,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/philbaker4/base-ts-package.git"
+  },
+  "dependencies": {
+    "vue": "^2.6.12"
   }
 }
