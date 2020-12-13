@@ -4,6 +4,7 @@
   "description": "Vue plugin for matching media queries in JS or TS",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "private": false,
   "scripts": {
     "playground": "ts-node src/playground",
     "build": "tsc",
