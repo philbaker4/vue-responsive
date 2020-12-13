@@ -1,5 +1,5 @@
 {
-  "name": "vue-responsive",
+  "name": "@philipbaker4/vue-responsive",
   "version": "0.0.1",
   "description": "Vue plugin for matching media queries in JS or TS",
   "main": "lib/index.js",
