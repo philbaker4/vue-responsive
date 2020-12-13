@@ -1,6 +1,6 @@
 import _Vue from "vue";
 
-import {ResponsiveData, Breakpoints} from './types'
+import {ResponsiveData, Breakpoints} from './types';
 
 function getResponsiveMixin(bp: Breakpoints = {
     smLower: 640,
@@ -115,7 +115,7 @@ function getResponsiveMixin(bp: Breakpoints = {
                 return this.screenSize === 'xxl';
             },
         },
-    }
+    });
 }
 
 
