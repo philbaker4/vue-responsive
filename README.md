@@ -1,28 +1,55 @@
-# Base TS Package
+# vue-responsive
 
 A template repository for developing Typescript packages.
 
 
-### Tooling 
-
-- [Typescript](https://www.typescriptlang.org/)
-- [Prettier](https://prettier.io/)
-- [Jest](https://jestjs.io/)
-
-
-## Development
-
-#### Playground 
-Active development can be tested using the playground file in the root of the src directory. 
+### Installation
 ```bash
-$ npm run playground
+$ npm install vue-responsive
 ```
 
-## Testing
-```bash
-$ npm run test
+
+### Setup
+```js
+// in file with root vue initialization - typically main.js / main.ts
+import { ResponsivePlugin } from 'vue-responsive';
+
+const minSizeBreakpoints = {
+  smLower: 640,
+  mdLower: 768,
+  lgLower: 1024,
+  xlLower: 1480,
+  xxlLower: 1500,
+}
+
+Vue.use(ResponsivePlugin, minSizeBreakpoints)
 ```
 
-## Publishing 
-[Publish Doc](https://docs.npmjs.com/cli/publish)<br>
-[Version Doc](https://docs.npmjs.com/cli/version)
+### Usage 
+```js
+// access screensize or computed properties via this.$responsive
+console.log(this.$responsive.screenSize)
+```
+
+#### Available Methods 
+- ```widthAbove(n)```
+- ```widthBelow(n)```
+- ```widthAboveOrEqualTo(n)```
+- ```widthBelowOrEqualTo(n)```
+
+#### Available Computed Properties
+- ```screenSize```
+- ```smAndUp```
+- ```mdAndUp```
+- ```lgAndUp```
+- ```xlAndUp```
+- ```smAndDown```
+- ```mdAndDown```
+- ```xlAndDown```
+- ```xsOnly```
+- ```smOnly```
+- ```mdOnly```
+- ```lgOnly```
+- ```xlOnly```
+- ```xxlOnly```
+
